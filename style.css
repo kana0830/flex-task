@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  background-color: blueviolet;
+  /* 横方向の整列方法が右寄り */
+  justify-content:flex-end;
+}
+
+header > div{
+  height: 70px;
+  /* Flexアイテムの横幅を指定 */
+  flex-basis: 140px;
+  margin: 0 10px;
+  background-color: hotpink;
+}
+
+header > :first-child{
+  margin-right:auto;
+}
+
+.main{
+  display: flex;
+  justify-content:center;
+}
+
+.sidebar{
+width: 300px;
+background-color: rgb(190, 238, 178);
+}
+
+.main-box{
+  max-width: 700px;
+  padding: 20px;
+  background-color: limegreen;
+  display: flex;
+  /* 横幅の伸びる比率を指定 */
+  flex-grow: 1;
+  /* 横方向の整列方法がセンター */
+  justify-content: center;
+  /* 横幅の合計値が、Flexコンテナー自体の横幅を超過する場合次の段にまわる */
+  flex-wrap: wrap;
+}
+
+.main-box > div{
+  height: 130px;
+  margin: 10px;
+  background-color: rgb(236, 236, 67);
+  /* Flexアイテムの横幅を指定 */
+  flex-basis: 200px;
+}
+
+footer{
+  width: 100%;
+  padding: 20px;
+  background-color: royalblue;
+  display: flex;
+  /* 横幅の合計値が、Flexコンテナー自体の横幅を超過する場合次の段にまわる */
+  flex-wrap:wrap; 
+  /* 横方向の整列方法がセンター */
+  justify-content:center;
+}
+
+footer > div{
+  /* Flexアイテムの横幅を指定 */
+  flex-basis: 45%;
+  /* 最大値の指定 */
+  max-width: 600px;
+  height: 40px;
+  margin: 10px;
+  background-color: aquamarine;
+}
